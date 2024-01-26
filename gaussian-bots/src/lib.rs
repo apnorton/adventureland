@@ -1,14 +1,8 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub mod wrappers;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+use wasm_bindgen::prelude::*;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[wasm_bindgen]
+pub fn refill_resources() {
+    wrappers::use_skill_targetless(wrappers::Skill::UseHp);
 }
