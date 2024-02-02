@@ -10,3 +10,15 @@ Wasm + Adventureland
 ---
 
 https://stackoverflow.com/questions/70420273/how-can-i-make-webpack-embed-my-wasm-for-use-in-a-web-worker 
+
+To build with the new packaging script:
+```
+$ python build_and_package.py gaussian-bots
+```
+...and then copy/paste the js from `bot_code.js`.
+
+If you don't have the virtual environment set up yet:
+```
+$ python -m venv .venv
+$ python -m pip install -f requirements.txt
+```
