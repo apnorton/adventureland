@@ -39,6 +39,9 @@ js_file = potential_js_files[0]
 with open(js_file) as f:
     js_lines = f.read().splitlines()
 
+# Ultra-hacky time --- we can't put exports in here, so we either remove export labels on
+# functions or delete the whole line if it's the other two exports in the generated code.
+# Really, really hacky. 
 for i in range(len(js_lines)):
     line = js_lines[i]
     if line.strip().startswith("export function"):
