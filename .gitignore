@@ -1,2 +1,5 @@
 target
 pkg
+.venv
+
+bot_code.js
