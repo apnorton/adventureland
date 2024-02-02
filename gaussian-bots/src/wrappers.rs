@@ -25,3 +25,7 @@ pub fn use_skill_targetless(skill: Skill) {
     juse_skill(skill_to_str(skill), JsValue::NULL, JsValue::NULL);
     jlog("Used an hp or mp pot... FROM RUST! 🦀");
 }
+
+pub fn al_log(s: &str) {
+    jlog(s);
+}

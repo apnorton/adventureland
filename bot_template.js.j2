@@ -21,5 +21,4 @@ function decode(encoded) {
     return bytes.buffer;
 }
 
-let wasm_module;
-__wbg_init(decode(wasm_data)).then(result => wasm_module = result);
+__wbg_init(decode(wasm_data)).then(result => result.run());
