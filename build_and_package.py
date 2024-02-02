@@ -1,8 +1,8 @@
 import base64
 import os
-import sys
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 from jinja2 import Template
@@ -41,7 +41,7 @@ with open(js_file) as f:
 
 # Ultra-hacky time --- we can't put exports in here, so we either remove export labels on
 # functions or delete the whole line if it's the other two exports in the generated code.
-# Really, really hacky. 
+# Really, really hacky.
 for i in range(len(js_lines)):
     line = js_lines[i]
     if line.strip().startswith("export function"):
