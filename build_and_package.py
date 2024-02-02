@@ -17,7 +17,8 @@ os.chdir(project)
 target_folder = Path("./pkg/")
 
 # first do a little cleanup
-shutil.rmtree(target_folder)
+if target_folder.exists():
+    shutil.rmtree(target_folder)
 
 # Build the js (has exports, tho, so we'll do some sketchy substitution)
 subprocess.run(["wasm-pack", "build", "--release", "--target", "web"])
