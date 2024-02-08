@@ -17,7 +17,6 @@ pub fn run() -> Result<(), JsValue> {
     Ok(())
 }
 
-#[wasm_bindgen]
 pub fn tick() {
     wrappers::al_log("Hi");
 }
